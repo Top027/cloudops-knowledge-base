@@ -1,53 +1,101 @@
-# CloudOps Knowledge Base
+# 🚀 CloudOps Knowledge Base
 
-Personal project built on AWS EC2, Ubuntu, Nginx, PHP and MariaDB.
+CloudOps Knowledge Base adalah aplikasi internal berbasis PHP dan MariaDB yang saya deploy di AWS EC2 menggunakan Ubuntu dan Nginx.
 
-## Features
+Project ini dibuat untuk melatih skill Cloud Engineer dan System Administrator mulai dari deployment, database management, backup, hingga source code management.
 
-- Login System
-- Dashboard
+---
+
+## 🏗 Architecture
+
+User
+↓
+Nginx Web Server
+↓
+PHP Application
+↓
+MariaDB Database
+
+---
+
+## ⚡ Features
+
+- User Login
+- Dashboard Monitoring
 - Work Instruction Management
 - Employee Management
 - Project Management
+- File Upload
 - Database Backup
 - Source Code Backup
 
-## Architecture
+---
 
-## Architecture
+## 🛠 Technologies
 
-User
-|
-v
-Nginx
-|
-v
-PHP
-|
-v
-MariaDB
+| Component | Technology |
+|------------|------------|
+| Cloud | AWS EC2 |
+| OS | Ubuntu Linux |
+| Web Server | Nginx |
+| Backend | PHP |
+| Database | MariaDB |
+| Version Control | GitHub |
 
-## Technologies
+---
 
-- AWS EC2
-- Ubuntu Linux
-- Nginx
-- PHP
-- MariaDB
-- GitHub
+## 📂 Project Structure
 
-## Screenshots
-
-See screenshots folder.
-
-## Project Structure
-
-cloudops-knowledge-base/
-├── source-code/
-├── database/
-├── screenshots/
+```text
+cloudops-knowledge-base
+│
+├── source-code
+│   ├── login.php
+│   ├── dashboard.php
+│   ├── wi.php
+│   └── pages/
+│
+├── database
+│   └── portfolio.sql
+│
+├── screenshots
+│
 └── README.md
+```
 
-## Author
+---
 
-Taufiq Hidayat
+## 🎯 Skills Demonstrated
+
+- Linux Administration
+- AWS EC2 Deployment
+- Nginx Configuration
+- PHP Development
+- MariaDB Administration
+- Database Backup & Restore
+- Source Code Management
+- Troubleshooting
+
+---
+
+## 📸 Screenshots
+
+### Login Page
+
+(upload screenshot di sini)
+
+### Dashboard
+
+(upload screenshot di sini)
+
+### Work Instruction Page
+
+(upload screenshot di sini)
+
+---
+
+## 👨‍💻 Author
+
+**Taufiq Hidayat**
+
+Cloud Engineer | System Engineer | Infrastructure Enthusiast

@@ -1,9 +1,9 @@
 <?php
 
 $conn = new mysqli(
-"172.31.37.186",
+"172.xx.xx.xx(ip si databse)",
 "portfolio",
-"Password123!",
+"Password database anda",
 "portfolio"
 );
 

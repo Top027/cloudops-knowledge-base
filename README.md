@@ -104,3 +104,5 @@ Cloud Engineer | System Engineer | Infrastructure Enthusiast
 ## Latest Update
 
 Project maintained by @Top27 🚀
+Project maintained by Taufiq Hidayat 🚀
+Cloud Engineer | AWS | VMware | Linux

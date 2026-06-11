@@ -1,0 +1,91 @@
+Langkah running di vm baru
+
+1. Clone Source Code
+git clone https://github.com/Top027/cloudops-knowledge-base.git
+cd cloudops-knowledge-base
+cek isi : ls -lah 
+pastikan ada :
+database/
+source-code/
+README.md
+
+2. Install Package yang Dibutuhkan
+-NGINX : sudo apt update
+sudo apt install nginx -y
+-PHP : sudo apt install php php-fpm php-mysql -y
+-MariaDB : sudo apt install mariadb-server -y
+
+3. Restore database
+masuk SQL(mysql):
+CREATE DATABASE portfolio;
+- cek :
+USE portfolio;
+SHOW TABLES;
+- harus muncul:
+users
+wi
+karyawan
+projects
+
+
+4. Buat User Database
+-masuk mariadb : mysql -u root
+-buat user : CREATE USER 'portfolio'@'localhost'
+IDENTIFIED BY 'Password';
+- berikan hak akses : GRANT ALL PRIVILEGES ON portfolio.* TO 'portfolio'@'localhost';
+FLUSH PRIVILEGES;
+-cek : SELECT User,Host FROM mysql.user;
+
+5. Perbaiki koneksi database
+- localhost
+root
+Password
+- dan php harus disamakan (atas dan Bawah harus sama)
+- 172.31.37.186
+portfolio
+Password123!
+-cek smua file : grep -R -A 4 "new mysqli" /var/www/html/
+-yg perlu di cek :
+dashboard.php
+login.php
+db.php
+wi.php
+tambah.php
+edit_wi.php
+delete_wi.php
+- smua harus sama sprit di Bawah:
+$conn = new mysqli(
+"localhost",
+"portfolio",
+"Password",
+"portfolio"
+);
+
+6. copy source ke web root
+- sudo cp -r source-code/* /var/www/html/
+- ls -lah /var/www/html
+
+7. konfigurasi ngnx
+- sudo nano /etc/nginx/sites-enabled/default
+- pastikan > index index.php index.html;
+- dan blok php aktif :
+location ~ \.php$ {
+    include snippets/fastcgi-php.conf;
+    fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+}
+- tes
+- restar : sudo systemctl restart nginx
+
+8. cek php-fpm
+- kadnag service belum jalan : sudo systemctl status php7.4-fpm
+- kalua mati : 
+sudo systemctl start php7.4-fpm
+sudo systemctl enable php7.4-fpm
+
+9. tes database
+masuk : mysql -u portfolio -p
+pass : Password
+- tes : 
+USE portfolio;
+SHOW TABLES;
+- tes login

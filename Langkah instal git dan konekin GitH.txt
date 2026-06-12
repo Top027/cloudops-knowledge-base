@@ -1,0 +1,69 @@
+Langkah instal git dan konekin GitHub repo dengan laptop
+
+- install dahulu, banyak di browser
+- setelah install lanjut konkin databse
+
+1. cek git terinstall
+- git --version : memastikan Git sudah terpsang
+- contoh output
+git version 2.50.1
+
+2. Konfigurasi Identitas
+- git config --global user.name "Taufiq Hidayat" : nama yg mncul saat commit
+- git config --global user.email "email@gmail.com" : email yg muncul saat commit
+- git config --list : cek
+
+3. - Buat Folder Project
+misalnya :
+mkdir cloudops-knowledge-base
+cd cloudops-knowledge-base
+
+4. Inisialisasi Git
+- git init : mengubah folder biasa menjadi reposiroty git
+- stelah ini muncul folder tersembunyi : .git > menyimpan history giy
+
+5. buat file
+- echo "# CloudOps Knowledge Base" > README.md
+
+6. cek status 
+- git status : melihat file yg berubah atau baru
+- contoh :
+Untracked files:
+README.md
+
+7. masukan ke staging
+- git add . : menandai file yg mau di simpan ke git
+
+8. commit
+- git commit -m "Initial commit" : menyimpan snapshot perubahan
+
+9. buat repository di GitHub
+- misalnya : cloudops-knowledge-base
+
+10. hubungkan ke GitHub
+- git remote add origin https://github.com/Top027/cloudops-knowledge-base.git : Menghubungkan laptop dengan repository GitHub.
+- cek : git remote -v
+
+11. push pertama
+- git branch -M main : Mengubah branch menjadi main.
+lalu 
+- git push -u origin main : mengirim source kode ke GitHub
+
+
+----Setelah Itu (Kerja Harian)----
+
+- cek status : git status
+- tambah : git add .
+- commit : git commit -m "update dashboard"
+- push : git push
+
+
+----kemudian di server yg mau Tarik updatenya dari gihub----
+
+- git pull : Tarik update terbaru dari repo GitHub ke server web 
+
+
+
+
+
+""""" Selamat Mencoba And GoodLuck Bro"""""

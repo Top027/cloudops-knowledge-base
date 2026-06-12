@@ -1,0 +1,29 @@
+Langkah git commit ke GitHub
+
+Masuk dulu ke folder project di laptop yang kemarin kamu clone atau konekin dari github:
+
+- cd D:\CloudOps-Project-v1 (sesuai temapt teman2 naro filenya yah)
+
+1. cek perubahan apa
+- get status
+Misalnya keluar:
+modified: README.md
+Untracked files:
+source-code/karyawan.php
+- artinya : modified = file lama diubah dan Untracked = file baru yang belum masuk Git
+
+2. Masukkan perubahan ke Git
+- git add . = masukin smua perubahan
+
+3. cek lagi 
+- get status
+harus berubah : Changes to be committed:
+
+4. commit
+- git commit -m "Add new feature/sesuai nama yg akan muncul nnti d github"
+
+5. git push : push ke GitHub
+
+6. refresh GitHub
+- https://github.com/Top027/cloudops-knowledge-base
+- file baru akan muncul
